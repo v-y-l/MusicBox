@@ -8974,37 +8974,37 @@ LOAD linker stubs
  .debug_rnglists
                 0x000036b9      0x304 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
 
-.debug_line     0x00000000    0x181f4
- .debug_line    0x00000000     0x18e1 CMakeFiles/blink.dir/main.cc.o
- .debug_line    0x000018e1     0x1b5f CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
- .debug_line    0x00003440      0x287 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
- .debug_line    0x000036c7      0x7cb CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/common/hardware_claim/claim.c.o
- .debug_line    0x00003e92      0x3fb CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
- .debug_line    0x0000428d      0x37c CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
- .debug_line    0x00004609     0x164c CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
- .debug_line    0x00005c55      0x2a9 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
- .debug_line    0x00005efe     0x130a CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/common/pico_sync/mutex.c.o
- .debug_line    0x00007208     0x341a CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/common/pico_time/time.c.o
- .debug_line    0x0000a622     0x1d53 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
- .debug_line    0x0000c375     0x20d6 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
- .debug_line    0x0000e44b      0x4ba CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
- .debug_line    0x0000e905      0x30a CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
- .debug_line    0x0000ec0f      0xb8d CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
- .debug_line    0x0000f79c      0x38b CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
- .debug_line    0x0000fb27      0x407 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
- .debug_line    0x0000ff2e      0x350 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
- .debug_line    0x0001027e      0x303 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
- .debug_line    0x00010581      0x68e CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
- .debug_line    0x00010c0f      0x540 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
- .debug_line    0x0001114f     0x2cec CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.o
- .debug_line    0x00013e3b      0x293 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.o
- .debug_line    0x000140ce      0x27a CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
- .debug_line    0x00014348      0x309 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
- .debug_line    0x00014651      0x19b CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .debug_line    0x000147ec     0x1bf1 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o
- .debug_line    0x000163dd       0xa0 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
- .debug_line    0x0001647d      0x8a3 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
- .debug_line    0x00016d20     0x14d4 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+.debug_line     0x00000000    0x181f1
+ .debug_line    0x00000000     0x18de CMakeFiles/blink.dir/main.cc.o
+ .debug_line    0x000018de     0x1b5f CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+ .debug_line    0x0000343d      0x287 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+ .debug_line    0x000036c4      0x7cb CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/common/hardware_claim/claim.c.o
+ .debug_line    0x00003e8f      0x3fb CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+ .debug_line    0x0000428a      0x37c CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+ .debug_line    0x00004606     0x164c CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+ .debug_line    0x00005c52      0x2a9 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
+ .debug_line    0x00005efb     0x130a CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/common/pico_sync/mutex.c.o
+ .debug_line    0x00007205     0x341a CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/common/pico_time/time.c.o
+ .debug_line    0x0000a61f     0x1d53 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+ .debug_line    0x0000c372     0x20d6 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+ .debug_line    0x0000e448      0x4ba CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+ .debug_line    0x0000e902      0x30a CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+ .debug_line    0x0000ec0c      0xb8d CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+ .debug_line    0x0000f799      0x38b CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+ .debug_line    0x0000fb24      0x407 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+ .debug_line    0x0000ff2b      0x350 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+ .debug_line    0x0001027b      0x303 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+ .debug_line    0x0001057e      0x68e CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+ .debug_line    0x00010c0c      0x540 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+ .debug_line    0x0001114c     0x2cec CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.o
+ .debug_line    0x00013e38      0x293 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.o
+ .debug_line    0x000140cb      0x27a CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
+ .debug_line    0x00014345      0x309 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
+ .debug_line    0x0001464e      0x19b CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+ .debug_line    0x000147e9     0x1bf1 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+ .debug_line    0x000163da       0xa0 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+ .debug_line    0x0001647a      0x8a3 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+ .debug_line    0x00016d1d     0x14d4 CMakeFiles/blink.dir/Users/vyl/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
 
 .debug_str      0x00000000    0x1ede1
  .debug_str     0x00000000    0x1ede1 CMakeFiles/blink.dir/main.cc.o

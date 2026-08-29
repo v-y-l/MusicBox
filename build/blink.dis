@@ -61,17 +61,17 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  28 .debug_rnglists 000039bd  00000000  00000000  00060850  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 29 .debug_line   000181f4  00000000  00000000  0006420d  2**0
+ 29 .debug_line   000181f1  00000000  00000000  0006420d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 30 .debug_str    0001ede1  00000000  00000000  0007c401  2**0
+ 30 .debug_str    0001ede1  00000000  00000000  0007c3fe  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 31 .comment      00000046  00000000  00000000  0009b1e2  2**0
+ 31 .comment      00000046  00000000  00000000  0009b1df  2**0
                   CONTENTS, READONLY
- 32 .ARM.attributes 00000036  00000000  00000000  0009b228  2**0
+ 32 .ARM.attributes 00000036  00000000  00000000  0009b225  2**0
                   CONTENTS, READONLY
- 33 .debug_frame  00007cd4  00000000  00000000  0009b260  2**2
+ 33 .debug_frame  00007cd4  00000000  00000000  0009b25c  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 34 .debug_line_str 000002d1  00000000  00000000  000a2f34  2**0
+ 34 .debug_line_str 000002d1  00000000  00000000  000a2f30  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 /Users/vyl/Desktop/MusicBox/build/blink.elf:     file format elf32-littlearm

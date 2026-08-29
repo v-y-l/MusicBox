@@ -53,22 +53,28 @@ class Buzzer {
 			slice_ = pwm_gpio_to_slice_num(buzzer_);  // One of eight "slice"s of electricity modulator
 			gpio_set_function(buzzer_, GPIO_FUNC_PWM);  // Where the electricity pulses to
 
-			//  Ticks per second. Pico is only holds 2**16 numbers (65536 is the max).
+			//  Ticks per second. Pico 2 only holds 2**16 numbers (65536 is the max).
 			//  Ticks is a "time slice" of one cycle of the clock.
 			//  High frequency, which the human ear interprets as high pitch, requires
-			//  more pulses of the buzzer within the interval.
+			//  more buzzes (fewer ticks before we modulate within one clock cycle).
  	    pwm_clock_ =
         static_cast<float>(clock_get_hz(clk_sys)) / PWM_PRESCALER;
  	    pwm_set_clkdiv(slice_, PWM_PRESCALER);
 		}
 
 		void buzz(std::string_view note, int ms) {
+			// hz is wave cycles per second.
+			// pwm_clock_ is clock cycles per second.
+			// wrap is clock cycles per wave cycles -1,
+			// since counting start at 0.
+			//
+			// If wrap = 2, it means 2 full sound wave cycles
+			// per second. This would be a very low frequency pitch.
 			float hz = NOTE_TO_FREQUENCY.at(note);
 	    uint32_t wrap =
         static_cast<uint32_t>(pwm_clock_ / hz) - 1;
 
-      pwm_set_wrap(slice_, wrap);  // Sets frequency 
-  	  
+      pwm_set_wrap(slice_, wrap);
 			pwm_set_gpio_level(buzzer_, wrap / 2);  // ~50% duty cycle
 	    pwm_set_enabled(slice_, true);
 
