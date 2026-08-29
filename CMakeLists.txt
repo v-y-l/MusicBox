@@ -10,6 +10,9 @@ add_executable(blink
 	main.cc
 )
 
-target_link_libraries(blink pico_stdlib)
+target_link_libraries(blink
+	pico_stdlib
+  hardware_pwm
+)
 
 pico_add_extra_outputs(blink)

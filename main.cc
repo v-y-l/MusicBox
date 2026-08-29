@@ -1,4 +1,10 @@
+#include "hardware/clocks.h"
+#include "hardware/pwm.h"
 #include "pico/stdlib.h"
+
+#include <string>
+#include <string_view>
+#include <unordered_map>
 
 // 40 hardware pins
 // 3, 8, 13, 18 are GND
@@ -6,6 +12,21 @@
 // So, GPIO15 is pin 20,
 // 4 slots of GND + GPIO 0
 constexpr uint GPIO15 = 15; // GP15 = pin 20
+
+const std::unordered_map<std::string_view, float> NOTE_TO_FREQUENCY{
+    {"A", 440.00f},
+    {"B", 493.88f},
+    {"C", 261.63f},
+    {"D", 293.66f},
+    {"E", 329.63f},
+    {"F", 349.23f},
+    {"G", 392.00f}
+};
+
+// It's a common concept to scale a high frequency system clock to
+// a slower, more manageable speed before the signal is used for a
+// peripheral.
+constexpr float PWM_PRESCALER = 100.0f;
 
 class Blinker {
 	public:
@@ -26,10 +47,58 @@ class Blinker {
 		uint led_;
 };
 
+class Buzzer {
+	public:
+		Buzzer(uint buzzer) : buzzer_(buzzer) {
+			slice_ = pwm_gpio_to_slice_num(buzzer_);  // One of eight "slice"s of electricity modulator
+			gpio_set_function(buzzer_, GPIO_FUNC_PWM);  // Where the electricity pulses to
+
+			//  Ticks per second. Pico is only holds 2**16 numbers (65536 is the max).
+			//  Ticks is a "time slice" of one cycle of the clock.
+			//  High frequency, which the human ear interprets as high pitch, requires
+			//  more pulses of the buzzer within the interval.
+ 	    pwm_clock_ =
+        static_cast<float>(clock_get_hz(clk_sys)) / PWM_PRESCALER;
+ 	    pwm_set_clkdiv(slice_, PWM_PRESCALER);
+		}
+
+		void buzz(std::string_view note, int ms) {
+			float hz = NOTE_TO_FREQUENCY.at(note);
+	    uint32_t wrap =
+        static_cast<uint32_t>(pwm_clock_ / hz) - 1;
+
+      pwm_set_wrap(slice_, wrap);  // Sets frequency 
+  	  
+			pwm_set_gpio_level(buzzer_, wrap / 2);  // ~50% duty cycle
+	    pwm_set_enabled(slice_, true);
+
+    	sleep_ms(ms);
+
+	    pwm_set_enabled(slice_, false);
+	 	  gpio_put(buzzer_, 0);
+ 		  sleep_ms(40);	
+		}
+
+  private:
+   	uint buzzer_;	
+		uint slice_;
+		float pwm_clock_;
+};
+
 int main() {
-	Blinker blinker{GPIO15};
+	//	Blinker blinker{GPIO15};
+	Buzzer buzzer{GPIO15};
+
+	const std::string melody[] = {
+    "D", "E", "F", "A", "A", "A", "G", "F", 
+    "G", "A", "A", "A", "G", "F", "G", "D"
+	};
+
 
 	while (true) {
-		blinker.blink();
+		//	blinker.blink();
+		for (std::string_view note : melody) {
+			buzzer.buzz(note, 250);
+		}
 	}
 }
